@@ -1,0 +1,37 @@
+export ZSH="/Users/jon.airey/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+# Defaults
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
+# Atom
+alias a="atom"
+
+# Brew
+alias brewski="brew update && brew upgrade && brew upgrade --cask --greedy; brew cleanup; brew cleanup cask; brew doctor --verbose"
+alias u="upgrade_oh_my_zsh && brewski"
+
+# Git
+alias gdi="git diff --ignore-all-space"
+alias gu="gcm && gl && gfa"
+
+gbco() {
+	gb $1 && gco $1
+}
+
+# Google Cloud SDK
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+# Java
+export JAVA_HOME="/usr/local/Cellar/openjdk@11/11.0.9/libexec/openjdk.jdk/Contents/Home"
+
+# Kubernetes
+alias k="kubectl"
+
+# SDKMAN!
+export SDKMAN_DIR="/Users/jon.airey/.sdkman"
+[[ -s "/Users/jon.airey/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jon.airey/.sdkman/bin/sdkman-init.sh"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"

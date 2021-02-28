@@ -1,0 +1,11 @@
+export ZSH="/home/pi/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+alias gdi="git diff --ignore-all-space"
+alias k='kubectl'
+alias kdp='kubectl describe pod'
+alias kds='kubectl describe service'
+alias kga='kubectl get all'
+alias kgaw='kubectl get all -o wide'
