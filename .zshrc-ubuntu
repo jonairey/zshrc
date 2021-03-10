@@ -1,0 +1,13 @@
+export ZSH="/home/jon/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+export GOOGLE_APPLICATION_CREDENTIALS=~/Development/work/coats/credentials/d3-admin-bootstrap-c3ac2c3b097e.json
+
+# Git
+alias gdi="git diff --ignore-all-space"
+alias gu="gcm && gl && gfa"
+
+gbco() {
+  gb $1 && gco $1
+}
